@@ -1,5 +1,5 @@
-var mynameis = function(){
-	alert('My name is '+name);
+var saymyname = function(name){
+	alert('My name is '+ name);
 }
 
 
