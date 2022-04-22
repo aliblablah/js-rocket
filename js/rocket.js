@@ -9,12 +9,29 @@ var changeState = function(state){
 					document.getElementById('countdown').innerHTML = countDownNumber; 
 
 
+
+//countdown
 	if (state == 2){
 		timer = setInterval(function() 
 		{
 			countDownNumber = countDownNumber - 1;
 			document.getElementById('countdown').innerHTML = countDownNumber; 
 			
+
+			if (countDownNumber > 4 && countDownNumber <= 7){
+				document.getElementById('burp').className = 'burp show';
+			} else{
+				document.getElementById('burp').className = 'burp';
+			}
+
+
+			if (countDownNumber >1 && countDownNumber <= 4){
+
+				document.getElementById('here').className = 'here show';
+
+			} else {
+				document.getElementById('here').className = 'here';
+			}
 
 			if (countDownNumber <= 0){
 				changeState(3);
@@ -29,7 +46,7 @@ var changeState = function(state){
 
 			console.log('randomNumber:', randomNumber)
 
-			if (randomNumber > 5){
+			if (randomNumber > 2){
 				changeState(4)
 			} else {
 				changeState(5)

@@ -1,3 +1,8 @@
+body{
+	font-family: 'helvetica', 'arial', sans-serif;
+}
+
+
 .left{
 
 	background-color: aquamarine;
@@ -9,6 +14,8 @@
 
 }
 
+
+
 .right{
 
 	background-color: cadetblue;
@@ -19,30 +26,85 @@
 	right:0;
 }
 
+.burp{
+
+	position: absolute;
+	top: 353px;
+	left: 197px;
+	background: url('../img/burp.png') no-repeat 0 0;
+	width: 200px;
+	height: 200px;
+	display: none;
+}
+
+.burp.show{
+	display: block;
+}
+
+
+.here{
+
+	position: absolute;
+	top: 353px;
+	right: 161px;
+	background: url('../img/here.png') no-repeat 0 0;
+	width: 200px;
+	height: 200px;
+	display: none;	
+
+}
+
+.here.show{
+	display: block;
+}
 
 .ground{
-	background-color: green;
+	background: url('../img/ground.png') no-repeat center center; 
 	position: absolute;
 	bottom: 0;
 	left:0;
 	width:100%;
-	height:20px;
+	height:85px;
 }
 
 
 .rocket{
 	position: absolute;
 	left: 50%;
-	bottom: 20px;
-	width: 20px;
-	height:100px;
-	background-color: blue;
+	bottom: -10px;
+	width: 200px;
+	height:200px;
+	margin-left: -100px;
+	background: url('../img/rocket-state1.png') no-repeat center center;
 	transition: bottom 10000ms;
 }
+
+/* rocket bg image */
+body.body-state2 .rocket{
+	background-image:url('../img/rocket-state2.gif');
+
+}
+
+body.body-state3 .rocket,
+body.body-state4 .rocket{
+	background-image:url('../img/rocket-state3.gif');
+}
+body.body-state5 .rocket{
+	background-image:url('../img/poof.png');
+	width: 200px;
+	height: 200px;
+	margin-left: -100px;
+}
+
+
+
+
 
 body.body-state1 .rocket{
 	transition: none;
 }
+
+
 
 body.body-state3 .rocket,
 body.body-state4 .rocket{
@@ -67,7 +129,22 @@ body.body-state5 .state5{display: block;}
 a{
 
 }
+.interface{
+	text-align: center;
+	padding: 20px;
+}
 
 a.button{
+	display: inline-block;
+	background-color: white;
+	color: black;
+	padding: 20px 40px;
+	text-transform: uppercase;
+	text-decoration: none;
+	border-radius: 10px;
+	transition: color 300ms;
+}
 
+a:hover{
+	color:red;
 }
